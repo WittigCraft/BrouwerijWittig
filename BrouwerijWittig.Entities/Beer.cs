@@ -10,6 +10,7 @@ namespace BrouwerijWittig.Entities
     {
         public string Origin { get; set; }
         public decimal AlcoholPercentage { get; set; }
+        public decimal Content { get; set; }
 
         public Beer()
         {

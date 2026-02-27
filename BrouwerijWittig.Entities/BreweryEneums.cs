@@ -9,7 +9,7 @@
         Glasses,
         Accessoires,
         Specials
-    } */
+    } 
 
     enum Brand
     {
@@ -20,7 +20,7 @@
         Cotedor,
         tonyschocolonely
     }
-
+    */
     enum Package
     {
         Box,
