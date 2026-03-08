@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrouwerijWittig.Entities
+namespace BrouwerijWittig.Bll
 {
-    internal class NonAlcoholic
+    public class Stocks
     {
     }
 }

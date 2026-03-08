@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrouwerijWittig.Entities
 {
-    internal class Brand
+    public class Brand : Product
     {
         public string BrandName { get; set; }
 
@@ -20,6 +20,7 @@ namespace BrouwerijWittig.Entities
         public Brand(string brandName)
         {
             BrandName = brandName;
+            ProductId = Guid.NewGuid();
         }
     }
 }

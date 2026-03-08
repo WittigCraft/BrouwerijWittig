@@ -52,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beers.cs" />
-    <Compile Include="Glasses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stocks.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrouwerijWittig.Dal\BrouwerijWittig.Dal.csproj">
