@@ -13,7 +13,6 @@ namespace BrouwerijWittig.Entities
         public bool FactoryOrdered { get; set; }
         public DateTime BackInStock { get; set; }
         public List<Product> Products { get; set; }
-        public List<Snacks> Snacks { get; set; }
         
 
         public Stock()
@@ -24,7 +23,7 @@ namespace BrouwerijWittig.Entities
 
         public Stock(Guid productId, string productName, bool inStock, int amountInStock, Category category, bool factoryOrdered, DateTime backInStock)
         {
-               ProductId = productId;
+               
                ProductName = productName;
                InStock = inStock;
                AmountInStock = amountInStock;
@@ -34,8 +33,6 @@ namespace BrouwerijWittig.Entities
                if (AmountInStock > 0) InStock = true;
                InStock = InStock;
                Products = new List<Product>();
-               Beers = new List<Beer>();
-               Snacks = new List<Snacks>();
         }
 
         
