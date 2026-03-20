@@ -11,6 +11,17 @@ namespace BrouwerijWittig.Bll
     public static class Beers
     {
         // CREATE   
+        public static bool Create(string productName, decimal price, string origin, decimal alcoholPercentage, decimal content)
+        {
+            if (!string.IsNullOrEmpty(productName) && price > 0 && !string.IsNullOrEmpty(origin) && alcoholPercentage > 0 && content > 0)
+            {
+                
+                Beer b = new Beer(productName, price, origin, alcoholPercentage,content);
+                return BeerDal.Create(b);
+            }
+
+            return false;
+        }
 
         // READ ALL
         public static List<Beer> Read()
@@ -30,9 +41,6 @@ namespace BrouwerijWittig.Bll
                 b = new Beer();
             }
 
-            {
-
-            }
 
             return b;
         }

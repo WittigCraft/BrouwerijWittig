@@ -10,8 +10,30 @@ namespace BrouwerijWittig.WebApp.Controllers
 {
     public class BeerController : Controller
     {
+        // CREATE
+        public ActionResult Create()
+        {
+            return View();
+        }
 
 
+        [HttpPost]
+        public ActionResult Create(string productName, decimal price, string origin, decimal alcoholPercentage, decimal content)
+        {
+
+            bool createSuccessful = Beers.Create(productName, price, origin, alcoholPercentage, content);
+            if (createSuccessful)
+            {
+                ViewBag.Feedback = "Beer created successfully!";
+                
+            }
+            else
+            {
+                ViewBag.Feedback = "Error creating beer.";
+                
+            }
+            return View();
+        }
 
 
         // READ ALL

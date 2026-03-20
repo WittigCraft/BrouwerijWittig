@@ -10,13 +10,13 @@ namespace BrouwerijWittig.Entities
     public class Product
     {
         [Key]
-        public Guid ProductId { get; set; } = Guid.NewGuid();
+        public Guid ProductId { get; set; } = Guid.NewGuid(); // generate automatic a new guid for each new product
         [Required]
         public string ProductName { get; set; } = string.Empty;
         [Required]
         public decimal Price { get; set; }
         
-        public DateTime? Expirationdate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
 
         public Guid GuidId { get; set; }
         public Category Category { get; set; }
@@ -31,9 +31,9 @@ namespace BrouwerijWittig.Entities
         public Product(){}
 
 
-        public Product(Guid productId, string productName, decimal price)  
+        public Product(string productName, decimal price)  
         {
-            ProductId = productId;
+            
             ProductName = productName;
             Price = price;
             

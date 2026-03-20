@@ -11,6 +11,27 @@ namespace BrouwerijWittig.Dal
     {
 
         // CREATE   
+        public static bool Create(Beer b)
+        {
+            using (var db = new BrouwerijWittigDbContext())
+            {
+                // We voegen het bier toe aan de DbSet van bieren
+                db.Beers.Add(b);
+                // We slaan de wijzigingen op in de database
+                int nrOfChanges = db.SaveChanges();
+
+                // Als er meer dan 0 wijzigingen zijn, is het toevoegen gelukt
+                if (nrOfChanges > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
 
         // READ ALL
         public static List<Beer> Read()

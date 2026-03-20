@@ -14,7 +14,7 @@ namespace BrouwerijWittig.Entities
 
         public Beer(){}
 
-        public Beer(Guid productId,string productName, decimal price, string origin, decimal alcoholPercentage, decimal content) : base(productId, productName, price)
+        public Beer(string productName, decimal price, string origin, decimal alcoholPercentage, decimal content) : base(productName, price)
         {
             
             Origin = origin;
